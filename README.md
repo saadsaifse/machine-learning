@@ -10,3 +10,4 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 # Basics
 * [Supervised Learning](basics/mlTypes/supervisedLearning.md)
 * [Unsupervised Learning](basics/mlTypes/unsupervisedLearning.md)
+* [Reinforcement Learning](basics/mlTypes/reinforcementLearning.md)
