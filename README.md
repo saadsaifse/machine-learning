@@ -11,4 +11,5 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 * [Supervised Learning](basics/mlTypes/supervisedLearning.md)
 * [Unsupervised Learning](basics/mlTypes/unsupervisedLearning.md)
 * [Reinforcement Learning](basics/mlTypes/reinforcementLearning.md)
+* [Training Testing and Validation Sets](basics/testing/dataSets.md)
 * [Overfitting](basics/testing/overfitting.md)
