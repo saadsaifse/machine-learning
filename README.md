@@ -6,6 +6,7 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 
 # Categories
 * [Basics](#Basics)
+* [Mathematics](#Mathematics)
 
 # Basics
 * [Supervised Learning](basics/mlTypes/supervisedLearning.md)
@@ -13,3 +14,6 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 * [Reinforcement Learning](basics/mlTypes/reinforcementLearning.md)
 * [Training Testing and Validation Sets](basics/testing/dataSets.md)
 * [Overfitting](basics/testing/overfitting.md)
+
+# Mathematics
+* [Data Representation](mathematics/dataRepresentation.md)
