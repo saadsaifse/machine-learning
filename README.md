@@ -17,3 +17,4 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 
 # Mathematics
 * [Data Representation](mathematics/dataRepresentation.md)
+* [Derivative & Gradient](mathematics/derivative-gradient.md)
