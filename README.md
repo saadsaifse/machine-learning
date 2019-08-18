@@ -19,3 +19,4 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 * [Data Representation](mathematics/dataRepresentation.md)
 * [Derivative & Gradient](mathematics/derivative-gradient.md)
 * [Random Variable](mathematics/randomVariable.md)
+* [Bayes Rule](mathematics/bayesRule.md)
