@@ -17,6 +17,7 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 * [Overfitting](basics/testing/overfitting.md)
 * [Classification vs. Regression](basics/classificationVsRegression.md)
 * [Shallow vs. Deep Learning](basics/shallowVsDeepLearning.md)
+* [Linear Regression](basics/linearRegression.md)
 
 # Mathematics
 * [Data Representation](mathematics/dataRepresentation.md)
