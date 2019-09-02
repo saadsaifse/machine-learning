@@ -23,4 +23,6 @@ While we have a straight line equation and corresponding training data to train 
 The above equation is simply a sum of squared differences in predicted label  and real label, which should be `0` if the prediction is exactly the same as real label. In mathematics , above equation is also called an objective as we minimize and maximize it. 
 
 If we notice, (*f*<sub>**w**, *b*</sub>(**x**) - y<sub>i</sub>)<sup>2</sup>
-tells us how much our prediction is wrong, and hence is called a **loss function**. Loss function tells us how much our prediction or classification is wrongly calculated. Whereas if we average out the loss function, we get the **cost function** or **empirical risk**.   
+tells us how much our prediction is wrong, and hence is called a **loss function**. Loss function tells us how much our prediction or classification is wrongly calculated. Whereas if we average out the loss function, we get the **cost function** or **empirical risk**.
+
+A common question here is why have we taken a square of the error (*f*<sub>**w**, *b*</sub>(**x**) - y<sub>i</sub>)<sup>2</sup>? Well, we could have taken just an absolute or may be cube or whatever. But it turns out, taking a square of an error creates a continuous derivative, which is easier to deal with in liner algebraic calculations. The above equation is also known as **square error loss**, as we are squaring the loss of the prediction.
