@@ -14,5 +14,13 @@ The task now is to input the training data with **x** feature vector and calcula
 
 Once we have the calculated and optimized parameter values of our regression model, the new data can be supplied as input in order to predict the output values.
 
+## Linear Regression Optimization
 
-// TODO: add more details such as loss function and examples
+While we have a straight line equation and corresponding training data to train i.e., to find the optimal values for **w**<sup>\*</sup> and *b*<sup>\*</sup>; Is there anyway to minimize the error, if yes then how to do it? The answer is below equation
+
+(1/N) ∑<sub>i=1..N</sub>(*f*<sub>**w**, *b*</sub>(**x**) - y<sub>i</sub>)<sup>2</sup>
+
+The above equation is simply a sum of squared differences in predicted label  and real label, which should be `0` if the prediction is exactly the same as real label. In mathematics , above equation is also called an objective as we minimize and maximize it. 
+
+If we notice, (*f*<sub>**w**, *b*</sub>(**x**) - y<sub>i</sub>)<sup>2</sup>
+tells us how much our prediction is wrong, and hence is called a **loss function**. Loss function tells us how much our prediction or classification is wrongly calculated. Whereas if we average out the loss function, we get the **cost function** or **empirical risk**.   
