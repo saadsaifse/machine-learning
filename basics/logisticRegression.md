@@ -15,3 +15,13 @@ So to model the logistic regression as a binary classifier, we would substitute 
 *f*<sub>**w**, *b*</sub>(**x**) = 1 / (1 + e<sup>-(**wx** + *b*)</sup>)
 
 Now that we have our binary logistic classifier model, how do we find the best values, represented as **w\*** and *b\** respectively?
+
+To find the values, we have our labeled training data. We want to maximize the likelihood of our training data, which means we have to come up with a way to find likelihood from each input. 
+
+With our sigmoid function applied, we get a value from `0` to `1` representing if an input value is correctly classified. Let's call this *p*. Then the likelihood of the other class will become *1-p*, as there are only two classes (binary classifier). So in order to increase the likelihood, we can optimize our model using **maximum likelihood** method. Maximum likelihood can be modeled as:
+
+ L<sub>**w**, *b*</sub>  = ∏<sub>i=1..N</sub> *f*<sub>**w**, *b*</sub>(**x<sub>i</sub>**)<sup>*y<sub>i</sub></sup>* (1 - *f*<sub>**w**, *b*</sub>(**x<sub>i</sub>**))<sup>*(1-y<sub>i</sub>)</sup>*
+
+The first term in the above equation becomes `1` if *y<sub>i</sub>* equals `0`, which will be the case of second class classification. While the second term will go `0` in case of first class classification.
+
+The product is used to find the maximum likelihood of N examples, as all observations (input values) are independent of each other.
