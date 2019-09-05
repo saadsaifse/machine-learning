@@ -19,6 +19,7 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 * [Shallow vs. Deep Learning](basics/shallowVsDeepLearning.md)
 * [Linear Regression](basics/linearRegression.md)
 * [Logistic Regression](basics/logisticRegression.md)
+* [Decision Tree Learning](basics/decisionTreeLearning.md)
 
 # Mathematics
 * [Data Representation](mathematics/dataRepresentation.md)

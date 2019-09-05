@@ -1,0 +1,3 @@
+# Decision Tree Learning
+
+As the name suggests, decision tree is a graph with nodes, forming a tree like structure. This structure is used to make decisions from the dataset. With a multi-feature dataset, decision tree algorithm calculates the probability of a feature at a node to decide which graph segment (left or right) should be followed. At each node, different features are examined until we reach at the end of the graph, that gives us the final decision.
