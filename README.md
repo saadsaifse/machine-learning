@@ -7,6 +7,7 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 # Categories
 * [Basics](#Basics)
 * [Mathematics](#Mathematics)
+* [Algorithms](#Algorithms)
 * [Word Embedding](#Word-Embedding)
 
 # Basics
@@ -26,6 +27,9 @@ Contains succinct write-ups of my daily (preferably) machine learning self educa
 * [Derivative & Gradient](mathematics/derivative-gradient.md)
 * [Random Variable](mathematics/randomVariable.md)
 * [Bayes Rule](mathematics/bayesRule.md)
+
+# Algorithms
+* [Support Vector Machine (SVM)](algorithms/svm.md)
 
 # Word Embedding
 * [Overview](wordEmbedding/overview.md)

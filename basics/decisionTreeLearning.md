@@ -8,7 +8,7 @@ An example decision tree algorithm is known as *ID3*, which uses quite similar o
 
  ID3 Optimization  = ∑<sub>i=1..N</sub> *y<sub>i</sub>* ln  *f*<sub>*ID3*</sub>(**x<sub>i</sub>**) (1 - *y<sub>i</sub>*) ln (1 - *f*<sub>*ID3*</sub>(**x<sub>i</sub>**))
 
- If you compare the above function to the optimization of logistic regression, then the difference is that here we took the natural logs instead of exponents, which gives the same result but easier for calculations. 
+ If you compare the above function to the optimization of logistic regression, then the difference is that here we took the natural logs instead of exponents, which gives the same result but easier for calculations.
 
  Also, as we are using *ID3* algorithm, instead of finding the best values for parameters **w** and *b*, we find the probability of *y* = 1 with **x** as an input.
 
