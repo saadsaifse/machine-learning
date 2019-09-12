@@ -18,3 +18,11 @@ In SVM, since the output has to be either +1 or -1, we apply a *sign* function o
 
 *y* = *sign*(**w<sup>\*<sup>** **x** - *b<sup>\*<sup>*)
 
+## Optimization
+
+For better generalization, the margin between two classes should be further away from the decision boundary (**wx** - *b* = 0) i.e., the distance between hyperplane of class 1 (**wx** - *b* = 1) and class 2 (**wx** - *b* = -1) should be maximized. How do we maximize the distance and what exactly is the distance between them? The distance between two parallel hyperplanes of our two classes is defined as 2/||**w**||, where ||**w**|| is the Euclidean norm of **w**. The Euclidean norm is defined as 
+
+||**w**|| = √ (∑<sub>j=1..D</sub> (*w<sup>(j)</sup>*)<sup>2</sup>)
+
+Therefore, in order to maximize the distance, we need to minimize the Euclidean norm of **w**, ||**w**||. In the next section, we will discuss about non-linear hyperplanes and dealing with noise in the data.
+
