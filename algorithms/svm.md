@@ -26,3 +26,32 @@ For better generalization, the margin between two classes should be further away
 
 Therefore, in order to maximize the distance, we need to minimize the Euclidean norm of **w**, ||**w**||. In the next section, we will discuss about non-linear hyperplanes and dealing with noise in the data.
 
+## Noisy data
+
+In real life, the data would not be completely separable in distinct classes. The data will not be separable with a straight line and examples of other classes will fall into the the wrong place i.e., in the zone of another class. This is considered as noise in the data and can be mitigated through the use of loss function, cost function and hyperparameter *C*. 
+
+Remember we talked about loss function as the function which tells the difference of expected value and predicted value whereas cost function tells us the average of the all the losses. In SVM, the loss function which is used is called **hinge loss function** and is defined as
+
+max(0, 1 - *y*<sub>i</sub>(**wx<sub>i</sub>** - b))
+
+where the term *y*<sub>i</sub>(**wx<sub>i</sub>** - b) is an easier way of writing two conditions of SVM together i.e., following two SVM conditions  
+
+**wx<sub>i</sub>** - b >= 1 if *y*<sub>i</sub> = +1
+
+and 
+
+**wx<sub>i</sub>** - b <= -1 if *y*<sub>i</sub> = -1
+
+can be written in one equation as
+
+*y*<sub>i</sub>(**wx<sub>i</sub>** - b) >= 1
+
+As the right output of *y*<sub>i</sub>(**wx<sub>i</sub>** - b) should be greater than or equal to 1, (1 - *y*<sub>i</sub>(**wx<sub>i</sub>** - b)) will give us either 0 or less than 0 values. However, if the classification is wrong and then this will give us greater than 0 values which will be proportional to the distance of mis-classification from the decision boundary.
+
+### Fixing Noise 
+
+To fix the noise, we take the average of loss function to get the cost function and control the distance ||**w**|| of the margin by a hyperparameter *C*. The equation then becomes
+
+C||**w**||<sup>2</sup> + 1/N ∑<sub>i = 1..N</sub> max(0, 1 - *y*<sub>i</sub>(**wx<sub>i</sub>** - b))
+
+where the left part is just controlling the margin distance and right part is the cost function. The value of cost function will tell us how much our data is far or near to the margin and accordingly we adjust the value of hyperparameter *C* to increase or decrease the distance of the the margin. Increasing *C* will give us better generalization on future examples as it increases the margin by ignoring the cost function. Whereas, decreasing *C* will give us better classification on the training data by minimizing the empirical risk. Setting the value of *C* hyperparameter is therefore a trafeoff and is normally set experimentally to control the noise.
