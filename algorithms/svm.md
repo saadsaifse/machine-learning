@@ -55,3 +55,9 @@ To fix the noise, we take the average of loss function to get the cost function 
 C||**w**||<sup>2</sup> + 1/N ∑<sub>i = 1..N</sub> max(0, 1 - *y*<sub>i</sub>(**wx<sub>i</sub>** - b))
 
 where the left part is just controlling the margin distance and right part is the cost function. The value of cost function will tell us how much our data is far or near to the margin and accordingly we adjust the value of hyperparameter *C* to increase or decrease the distance of the the margin. Increasing *C* will give us better generalization on future examples as it increases the margin by ignoring the cost function. Whereas, decreasing *C* will give us better classification on the training data by minimizing the empirical risk. Setting the value of *C* hyperparameter is therefore a trafeoff and is normally set experimentally to control the noise.
+
+## Non-Linear data
+
+The classes in the dataset are not always separable with a straight hyperplane due to inherent non-linearity in the examples. In this case, different transformations are tried and applied on to the dataset in order to see if the dataset is separable in higher dimensional space. For example, the data that is not separable in 2D space, might be separable in 3D space.
+
+If **x** is a feature vector [q,p] then Φ(**x**) is the transformed feature vector that could be [q<sup>2</sup>, √2qp, p<sup>2</sup>]. But this brings another problem, how do we know before hand, which transformation might work? Fortunately, there is a trick known as **Kernel trick** to implicitly apply transformation during cost function optimization. There are several kernel functions or simply **kernels** that can be applied such as quadratic kernel and **RBF Kernel**, etc. which will be discussed separately in detail. But the take away here is that, non-linear data is first passed through a kernel function and then classified using SVMs. 
