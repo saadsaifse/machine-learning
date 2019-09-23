@@ -1,0 +1,5 @@
+# Gradient Descent
+
+Loss function of any ML algorithm tells the difference in the actual and predicted values. Using loss function, some algorithms like linear and logistic regressions define a cost function which is used as an optimization criterion for improving the algorithm results. The optimization criteria uses different algorithms to optimize the cost function. If the optimization criterion is differentiable then Gradient descent and Stochastic gradient descent are frequently used algorithms that are used as the optimization algorithms.
+
+Gradient descent can be used to find optimal parameters for linear, logistic regressions, SVM and neural networks. Gradient descent finds the global and local minimums of a function. In case of regression, SVM and other convex algorithms, there is only one global minimum whereas in case of neural networks, local minimums can also be found. Local minimum can be found at some random point, by taking steps proportional to the negative of gradient from that random point. 
