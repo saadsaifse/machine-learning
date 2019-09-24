@@ -12,12 +12,20 @@ We know that by minimizing the mean squared error
 
 *l* = 1/N ∑<sub>i=1..N</sub> (*y<sub>i</sub>* - *(wx<sub>i</sub> + b*))<sup>2</sup>
 
-we can find the optimal values of *w* and *b*. To apply gradient descent, we differentiate the above equation with respect to all parameters, which in this case are *w* and *b*.
+we can find the optimal values of *w* and *b*. To apply gradient descent, we differentiate the above equation with respect to all parameters, which in this case are *w* and *b*. The partial derivatives of *l*, *dl* with respect to both parameters are calculated as per the mathematics of derivative and are given below.
 
-*dl/dw* = 1/N∑<sub>i=1..N</sub>-2*x<sub>i</sub>* (*y<sub>i</sub> - (wx<sub>i</sub> + b))*
+*dl/dw* = 1/N ∑<sub>i=1..N</sub>-2*x<sub>i</sub>* (*y<sub>i</sub> - (wx<sub>i</sub> + b))*
 
 and 
 
-*dl/db* = 1/N∑<sub>i=1..N</sub>-2 (*y<sub>i</sub> - (wx<sub>i</sub> + b))*
+*dl/db* = 1/N ∑<sub>i=1..N</sub>-2 (*y<sub>i</sub> - (wx<sub>i</sub> + b))*
 
-where d represent the derivative.
+Since we have the training data with N observations, we get N values of *w* and *b*. These values are calculated along with the learning rate α which can be set to control the size of the update.
+
+For each *w<sub>i</sub>* and *b<sub>i</sub>* we get the following formulas
+
+*w<sub>i</sub>* = α *  1/N * (</sub>-2*x<sub>i</sub>* (*y<sub>i</sub> - (w<sub>i-1</sub> x<sub>i</sub> + b<sub>i-1</sub>))*)
+
+*b<sub>i</sub>* = α * 1/N * (</sub>-2 (*y<sub>i</sub> - (w<sub>i-1</sub> x<sub>i</sub> + b<sub>i-1</sub>))*)
+
+Using above equations derived from the derivatives, we can get N values for *w* and *b*. For the first training example, we set the *w<sub>0</sub>* and *b<sub>0</sub>* to 0. After an iteration of all the training examples, one epoch gets complete. Multiple epochs are executed until the values of parameters do not change much and that gives us the optimal *W* and *b* values to be used for future predictions.
